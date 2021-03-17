@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 go get -u github.com/jvehent/pineapple
 ~/go/bin/pineapple <<EOF
 aws:
@@ -22,7 +23,7 @@ components:
       type: rds
       tag:
           key: environment-name
-          value: invoicerdb
+          value: invoicer-api
 
 #    - name: bastion
 #      type: ec2
