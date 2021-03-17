@@ -1,6 +1,6 @@
 #!/bin/bash
 go get -u github.com/jvehent/pineapple
-$GOPATH/bin/pineapple <<EOF
+~/go/bin/pineapple <<EOF
 aws:
     region: eu-west-2
     accountnumber: 308362907713
@@ -22,7 +22,7 @@ components:
       type: rds
       tag:
           key: environment-name
-          value: invoicer-api
+          value: invoicerdb
 
 #    - name: bastion
 #      type: ec2
