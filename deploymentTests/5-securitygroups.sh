@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env sh
 set -x
 go get -u github.com/jvehent/pineapple
-~/go/bin/pineapple <<EOF
+$GOPATH/bin/pineapple <<EOF
 aws:
     region: eu-west-2
     accountnumber: 308362907713
