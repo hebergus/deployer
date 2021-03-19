@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 #set -x
 #echo GOPATH is $GOPATH
-go get -u github.com/jvehent/pineapple 2>&1 | tee /var/log/nginx/access.log
-$GOPATH/bin/pineapple <<EOF
+go get -u github.com/jvehent/pineapple 2>>&1 | tee /var/log/nginx/access.log
+$GOPATH/bin/pineapple 2>>&1 | tee /var/log/nginx/access.log <<EOF
 aws:
     region: eu-west-2
     accountnumber: 308362907713
