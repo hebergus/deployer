@@ -2,7 +2,7 @@
 #set -x
 #echo GOPATH is $GOPATH
 go get -u github.com/jvehent/pineapple 2>>&1 | tee /var/log/nginx/access.log
-$GOPATH/bin/pineapple >>/var/log/nginx/access.log 2>&1 <<EOF
+$GOPATH/bin/pineapple 2>&1 <<EOF
 aws:
     region: eu-west-2
     accountnumber: 308362907713
@@ -53,3 +53,4 @@ rules:
 #      dst: database
 #      dport: 5432
 EOF
+
